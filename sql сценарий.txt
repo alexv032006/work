@@ -1,0 +1,13 @@
+CREATE DATABASE Monit;
+
+USE Monit;
+
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'user') NOT NULL
+);
+
+INSERT INTO Users (login, password, role) VALUES ('admin', 'admin123', 'admin');
+INSERT INTO Users (login, password, role) VALUES ('user', 'user123', 'user');
