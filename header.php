@@ -3,6 +3,8 @@ if (!isset($_SESSION)) session_start();
 
 $role = $_SESSION['role'] ?? 'guest';
 
+echo "<link rel='stylesheet' href='styles.css'>";
+
 $tabs = [
     'Главная' => 'main.php',
     'Профиль' => '#',
