@@ -33,14 +33,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 }
 
+echo "<link rel='stylesheet' href='styles.css'>";
 
 echo "<h2>Вход</h2>";
 if (!empty($error)) echo "<p style='color:red;'>$error</p>";
 
 echo '
-<form method="post">
-  <label>Логин: <input type="text" name="login" required></label><br><br>
-  <label>Пароль: <input type="password" name="password" required></label><br><br>
-  <input type="submit" value="Войти">
-</form>';
+<div class="login-box">
+  <form method="post">
+    <div class="form-row">
+      <label for="login">Логин:</label>
+      <input type="text" name="login" id="login" required>
+    </div>
+    <div class="form-row">
+      <label for="password">Пароль:</label>
+      <input type="password" name="password" id="password" required>
+    </div>
+    <input type="submit" value="Войти">
+  </form>
+</div>';
 ?>
